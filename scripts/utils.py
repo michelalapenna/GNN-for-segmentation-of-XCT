@@ -6,15 +6,15 @@ def raw_to_tensor(name, side):
   return tensor
 
 def tif_to_tensor(name, side):
-  im = tiff.imread(name)
+  im = tifffile.imread(name)
   tensor = torch.tensor(im).reshape(side,side)
   return tensor
 
-def average_labels_vol(name,side):
+def average_labels_vol(name,side,classes):
 
-  occurrences = [[] for _ in range(6)]
+  occurrences = [[] for _ in range(classes)]
 
-  for j in range(6):
+  for j in range(classes):
       occurrences[j].append(name.reshape(side**3).tolist().count(j))
 
   return occurrences
