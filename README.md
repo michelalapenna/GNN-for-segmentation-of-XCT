@@ -5,6 +5,6 @@ implement a Graph Convolutional Neural Network (GCNN) architecture to segment a 
 
 Our simple GCNN shows a comparable performance to more standard machine learning methods, but uses a greatly reduced number of parameters, features low training time, and needs little hardware resources. Our GCNN thus achieves a cost-effective reliable segmentation.
 
-The `Example_Data` folder contains a 8x8x8 sub-volume of features and labels extracted from one of the 512x512x512 synthetic volumes used for training. In the same folder we provide the image of a cross-section of an experimental volume and two more images showing the ground truth labels of a synthetic slice and the corresponding predictions by our model.
+The `Example_Data` folder contains a 8x8x8 sub-volume of features and labels extracted from one of the 512x512x512 synthetic volumes used for training. In the same folder we provide the cross-section image of an experimental volume and two more images showing the ground truth labels of a synthetic slice and the corresponding predictions by our model.
 
 In the folder `scripts` we provide the .pys including all the necessary imports, custom functions and classes needed to execute the code in the notebooks. We furthermore provide a different notebook for the training of the model, the testing on the synthetic dataset and the testing on the experimental dataset respectively.
