@@ -9,9 +9,11 @@ Our GCNN architectures show a comparable performance to state-of-the-art 3D Deep
 
 ## The repository
 
-The `Segmentation Examples` folder contains images showing the ground truth labels on the left and the segmentation by our GCNN model on the right (both for synthetic and experimental slices).
+The `Segmentation Examples` folder contains images showing the ground truth labels and the segmentation by our simple GCNN and ViG model (both for synthetic and experimental slices).
 
-In the folder `scripts` we provide the .pys including all the necessary imports, custom functions and classes needed to execute the code in the notebooks. We furthermore provide a different notebook for the training of the model, the testing on the synthetic dataset and the testing on the experimental dataset respectively.
+The `Samples Data` folder contains instead subvolumes of dimensions 150x150x150 extracted from one synthetic and one experimental volumes.
+
+In the folder `scripts` we provide the .pys including all the necessary imports, custom functions and classes needed to execute the code in the notebooks. We furthermore provide separate notebooks for training, testing on the synthetic dataset and testing on the experimental dataset respectively.
 
 The complete synthetic and experimental datasets used in the paper are available from the corresponding author upon request. The trained models are available from [this link](https://liveunibo-my.sharepoint.com/:f:/g/personal/ferdinando_zanchett2_unibo_it/EmIJsOuc311MqaonANsFLU4BUuXTnRbOWu0_5Yv33KptWg?e=rJZTgm).
 
