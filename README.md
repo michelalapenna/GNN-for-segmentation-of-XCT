@@ -7,13 +7,14 @@ implement two different Graph Convolutional Neural Network (GCNN) architectures 
 
 Our GCNN architectures show a comparable performance to state-of-the-art 3D Deep Convolutional Neural Network (DCNN) and autoencoders, but use a greatly reduced number of parameters. Once the libraries employed for GCNNs will reach the same optimization level as the ones implementing usual DCNNs, this reduced number of trainable parameters will allow to cut the computational costs both in training and testing.
 
+
 ## The repository
 
-The `Segmentation Examples` folder contains images showing the ground truth labels and the segmentation by our simple GCNN and ViG model (both for synthetic and experimental slices).
+The `Segmentation Examples` folder contains images showing the ground truth labels and the segmentation by our simple GCNN and ViG models (both for synthetic and experimental slices).
 
-The `Samples Data` folder contains instead subvolumes of dimensions 150x150x150 extracted from one synthetic and one experimental volumes.
+The `Samples Data` folder contains, instead, samples from the synthetic and experimental dataset. We provide subvolumes of dimensions 150x150x150 voxels, with corresponding labels. In the case of experimental data, we do not provide a labelled subvolume but only a manually-labelled slice from the subvolume.
 
-In the folder `scripts` we provide the .pys including all the necessary imports, custom functions and classes needed to execute the code in the notebooks. We furthermore provide separate notebooks for training, testing on the synthetic dataset and testing on the experimental dataset respectively.
+In the folder `scripts` we include the .pys containing all the necessary imports, custom functions and classes needed to execute the code in the notebooks. We furthermore provide separate notebooks for training, testing on the synthetic dataset and testing on the experimental dataset respectively.
 
 The complete synthetic and experimental datasets used in the paper are available from the corresponding author upon request. The trained models are available from [this link](https://liveunibo-my.sharepoint.com/:f:/g/personal/ferdinando_zanchett2_unibo_it/EmIJsOuc311MqaonANsFLU4BUuXTnRbOWu0_5Yv33KptWg?e=rJZTgm).
 
