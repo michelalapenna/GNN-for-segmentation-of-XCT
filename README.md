@@ -17,7 +17,9 @@ To build the second enlarged GCNN architecture, we adapt Vision Graph Neural Net
 
 Our enlarged GCNN architecture comprises two adapted ViG blocks. The Grapher module contains one initial 3DCNN layer, useful to extract richer and more significative features for the nodes, and a succession of three GCLs as in the simple GNN architecture, each followed by a non-linearity: GAT (Graph Attention Networks), GraphSage, and GCN (Graph Convolutional Network). Likewise, the FFN module is composed of two linear layers separated by a non-linear activation function. The outputs of the two adapted ViG blocks are then summed together before passing through a final linear layer. This residual connection has the aim of helping the convergence of the model.
 
-![two_archi(1)](https://github.com/michelalapenna/GNN-for-segmentation-of-XCT/assets/82046452/ed9c77b1-2183-48eb-ab43-fd1b2eacc221)
+<p align="center">
+  <img src=![two_archi(1)](https://github.com/michelalapenna/GNN-for-segmentation-of-XCT/assets/82046452/ed9c77b1-2183-48eb-ab43-fd1b2eacc221)/>
+</p>
 
 ## The repository
 
