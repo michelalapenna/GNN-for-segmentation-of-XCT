@@ -9,7 +9,7 @@ Our GCNN architectures show a comparable performance to state-of-the-art 3D Deep
 
 ## Description of the two architectures
 
-First, we trained a simple GCNN architecture on the non-augmented synthetic dataset, just as a proof of concept for the usage of GCNNs for this task. The encoding is obtained by a sequence of three GCLs, each followed by a non-linearity: GAT (Graph Attention Networks), GraphSage, and GCN (Graph Convolutional Network). The decoder consists of two linear layers separated by a non-linear activation function. The first GCL is a GAT layer, so the attention coefficients are computed directly on the input features.
+First, we trained a simple GCNN architecture on the non-augmented synthetic dataset, just as a proof of concept for the usage of GCNNs for this task. The encoding is obtained by a sequence of three GCLs, each followed by a non-linearity: GAT (Graph Attention Networks), GraphSage, and GCN (Graph Convolutional Network). The decoder consists of two linear layers separated by a non-linear activation function. The first GCL is a GAT layer, so that the attention coefficients are computed directly on the input features.
 
 Even if this model understands the semantic of microstructures correctly, the performance gets considerably worse when it is trained on the augmented dataset. This is due to the fact that the model is too small and it is not able to learn equally well when the range of gray levels is enlarged. This lead us to build a second,larger, architecture, to train on the synthetic augmented dataset and further improve the segmentation on experimental data.
 
