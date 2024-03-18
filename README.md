@@ -21,11 +21,11 @@ Our enlarged GCNN architecture comprises two adapted ViG blocks. The Grapher mod
 
 ## The repository
 
-The `Segmentation Examples` folder contains images showing the ground truth labels and the segmentation by our simple GCNN and ViG models (both for synthetic and experimental slices).
+In the folder `scripts` we include the .pys containing all the necessary imports, custom functions and classes needed to execute the code in the notebooks. We furthermore provide separate notebooks for training and testing.
 
-The `Samples Data` folder contains, instead, samples from the synthetic and experimental dataset. We provide subvolumes of dimensions 150x150x150 voxels, with corresponding labels. In the case of experimental data, we do not provide a labelled subvolume but only a manually-labelled slice from the subvolume.
+The `Segmentation Examples` folder contains images showing the ground truth labels and the segmentation by our two models (both for synthetic and experimental slices).
 
-In the folder `scripts` we include the .pys containing all the necessary imports, custom functions and classes needed to execute the code in the notebooks. We furthermore provide separate notebooks for training, testing on the synthetic dataset and testing on the experimental dataset respectively.
+The `Samples Data` folder contains, instead, samples from the synthetic and experimental dataset. We provide sub-volumes of dimensions 150x150x150 voxels, with corresponding labels. In the case of experimental data, we do not provide a labelled sub-volume but only a manually-labelled slice from the sub-volume.
 
 The complete synthetic and experimental datasets used in the paper are available from the corresponding author upon request. The trained models are available from [this link](https://liveunibo-my.sharepoint.com/:f:/g/personal/ferdinando_zanchett2_unibo_it/EmIJsOuc311MqaonANsFLU4BUuXTnRbOWu0_5Yv33KptWg?e=rJZTgm).
 
