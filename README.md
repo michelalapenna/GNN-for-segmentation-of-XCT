@@ -1,4 +1,4 @@
-# Geometric Deep Learning for enhanced quantitative analysis of Microstructures in X-ray Computed Tomography Data
+# Graph Neural Networks for enhanced quantitative analysis of Microstructures in X-ray Computed Tomography Data
 
 ## Abstract
 
