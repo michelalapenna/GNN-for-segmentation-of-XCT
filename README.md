@@ -18,6 +18,25 @@ Our enlarged GCNN architecture comprises two adapted ViG blocks. The Grapher mod
 
 ![ViG_archi](https://github.com/user-attachments/assets/eda4ac76-b7bc-4914-b897-07f02ef421b5)
 
+## The repository
+
+In the folder `scripts` we include the .pys containing all the necessary imports and utils functions, together with the definition of the models and the Train/Test functions. We furthermore provide separate notebooks for training and testing.
+
+The `Segmentation Examples` folder contains images showing the ground truth labels and the segmentation by our two models on experimental slices.
+
+The `Samples Data` folder contains, instead, samples from the synthetic and experimental dataset. We provide sub-volumes of dimensions 150x150x150 voxels, with corresponding labels. In the case of experimental data, we do not provide a labelled sub-volume but only a manually-labelled slice from the sub-volume.
+
+The complete synthetic and experimental datasets used in the paper are available from the corresponding author upon request.
+
+## Installation of the correct environment
+
+We report the commands used in conda to consistently install pytorch geometric.
+
+```
+conda install pytorch==1.11.0 torchvision torchaudio pytorch-cuda=11.7 -c pytorch -c nvidia 
+
+conda install pyg pytorch-cuda=11.7 -c pyg -c nvidia
+```
 ## References
 <a id="1">[1]</a> 
 Veličković Petar, Cucurull Guillem, Casanova Arantxa, Romero Adriana, Liò Pietro and Bengio Yoshua. 
@@ -43,23 +62,3 @@ International Conference on Neural Information Processing Systems, 2022.
 Keyulu Xu, Weihua Hu, Jure Leskovec and Stefanie Jegelka. 
 How Powerful are Graph Neural Networks? 
 International Conference on Learning Representations, 2019.
-
-## The repository
-
-In the folder `scripts` we include the .pys containing all the necessary imports and utils functions, together with the definition of the models and the Train/Test functions. We furthermore provide separate notebooks for training and testing.
-
-The `Segmentation Examples` folder contains images showing the ground truth labels and the segmentation by our two models on experimental slices.
-
-The `Samples Data` folder contains, instead, samples from the synthetic and experimental dataset. We provide sub-volumes of dimensions 150x150x150 voxels, with corresponding labels. In the case of experimental data, we do not provide a labelled sub-volume but only a manually-labelled slice from the sub-volume.
-
-The complete synthetic and experimental datasets used in the paper are available from the corresponding author upon request.
-
-## Installation of the correct environment
-
-We report the commands used in conda to consistently install pytorch geometric.
-
-```
-conda install pytorch==1.11.0 torchvision torchaudio pytorch-cuda=11.7 -c pytorch -c nvidia 
-
-conda install pyg pytorch-cuda=11.7 -c pyg -c nvidia
-```
