@@ -2,8 +2,7 @@
 
 ## Abstract
 
-Quantitative microstructural analysis of XCT 3D images is key for quality assurance of materials and components. In this work we
-implement two different Graph Convolutional Neural Network (GCNN) architectures to segment a complex Al–Si Metal Matrix composite XCT volume (3D image). We train the model on a synthetic dataset and we assess its performance on both synthetic and experimental, manually labelled, datasets. 
+Quantitative microstructural analysis of XCT 3D images is key for quality assurance of materials and components. In this work we implement two different Graph Convolutional Neural Network (GCNN) architectures to segment a complex Al–Si Metal Matrix composite XCT volume (3D image). We train the model on a low-resembling synthetic dataset and we assess its performance on both synthetic and experimental, manually labelled, datasets. To enhance the segmentation of experimental data, we fine-tune the trained model on an experimental sub-volume previously segmented by the trained model itself and then further manually-labelled. Fine-tuning largely increase the quality of the segmentation.
 
 Our GCNN architectures show a comparable performance to state-of-the-art 3D Deep Convolutional Neural Network (DCNN) and autoencoders, but use a greatly reduced number of parameters. Once the libraries employed for GCNNs will reach the same optimization level as the ones implementing usual DCNNs, this reduced number of trainable parameters will allow to cut the computational costs both in training and testing.
 
@@ -15,13 +14,13 @@ Even if this model correctly understands the semantic of microstructures, the pe
 
 To build the second enlarged GCNN architecture, we adapt Vision Graph Neural Network (ViG) blocks. A ViG block consists of two main parts: the Grapher and the FFN (Feed Forward Network) modules. The Grapher module contains the Graph Convolutional layers, while the FFN module is a simple multi-layer perceptron with two fully-connected layers and it is introduced to further encourage the feature transformation and alleviate the typical phenomenon of over-smoothing in GCNNs. Indeed, introducing a FFN module after the Graph Convolutions interrupts the Message Passing flow and projects the nodes' embeddings into a larger space, thus avoiding over-smoothing when enlarging the architecture. The final architecture is built up by concatenating different ViG blocks.
 
-Our enlarged GCNN architecture comprises two adapted ViG blocks. The Grapher module contains one initial 3DCNN layer, useful to extract richer and more significative features for the nodes, and a succession of three GCLs as in the simple GNN architecture, each followed by a non-linearity: GAT (Graph Attention Networks), GraphSage, and GCN (Graph Convolutional Network). Likewise, the FFN module is composed of two linear layers separated by a non-linear activation function. The outputs of the two adapted ViG blocks are then summed together before passing through a final linear layer. This residual connection has the aim of helping the convergence of the model.
+Our enlarged GCNN architecture comprises two adapted ViG blocks. The Grapher module contains one initial 3DCNN layer, useful to extract richer and more significative features for the nodes, and a succession of three GCLs as in the simple GNN architecture, each followed by a non-linearity: one first GIN (Graph Isomorphism Network) layer with a 2-layer MLP, and two consecutive GraphSage layers. Batch normalization is applied after the 3DCNN and after each GCL layer in the Grapher module. On the other side, the FFN module is composed of two linear layers separated by a non-linear activation function. The decoder of the model is simply constituted by the final linear layer. In between the different modules, skip connections are inserted to help the convergence of the model. We stress that the size and the topology of the graph is not changing throughout the architecture. On the other hand, the dimension of the embedding is increasing until the final dense layer projects it on the number of classes.
 
 ![two_archi(1)](https://github.com/michelalapenna/GNN-for-segmentation-of-XCT/assets/82046452/ed9c77b1-2183-48eb-ab43-fd1b2eacc221)
 
 ## The repository
 
-In the folder `scripts` we include the .pys containing all the necessary imports, custom functions and classes needed to execute the code in the notebooks. We furthermore provide separate notebooks for training and testing.
+In the folder `scripts` we include the .pys containing all the necessary imports and utils functions, together with the definition of the models and the Train/Test functions. We furthermore provide separate notebooks for training and testing.
 
 The `Segmentation Examples` folder contains images showing the ground truth labels and the segmentation by our two models (both for synthetic and experimental slices).
 
