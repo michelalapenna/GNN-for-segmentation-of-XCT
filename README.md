@@ -26,7 +26,7 @@ The `Segmentation Examples` folder contains images showing the ground truth labe
 
 The `Samples Data` folder contains, instead, samples from the synthetic and experimental dataset. We provide sub-volumes of dimensions 150x150x150 voxels, with corresponding labels. In the case of experimental data, we do not provide a labelled sub-volume but only a manually-labelled slice from the sub-volume.
 
-The complete synthetic and experimental datasets used in the paper are available from the corresponding author upon request. The trained models are available from [this link](https://liveunibo-my.sharepoint.com/:f:/g/personal/ferdinando_zanchett2_unibo_it/EmIJsOuc311MqaonANsFLU4BUuXTnRbOWu0_5Yv33KptWg?e=rJZTgm).
+The complete synthetic and experimental datasets used in the paper are available from the corresponding author upon request.
 
 ## Installation of the correct environment
 
